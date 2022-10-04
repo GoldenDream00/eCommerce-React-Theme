@@ -1,0 +1,5 @@
+dist/
+theme/assets/
+theme/dist/
+public/admin-assets/tinymce
+public/admin-assets/css/*.min.css

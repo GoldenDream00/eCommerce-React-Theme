@@ -1,0 +1,33 @@
+{
+  "apps": [
+    {
+      "name": "api",
+      "script": "npm",
+      "args": "run start:api",
+      "watch": ["./config", "./src/api/server"],
+      "instances": "1",
+      "exec_mode": "fork",
+      "watch_options": {
+        "persistent": true,
+        "ignoreInitial": false
+      }
+    },
+    {
+      "name": "store",
+      "script": "npm",
+      "args": "run start:store",
+      "watch": [
+        "./config",
+        "./dist/store",
+        "./theme/dist",
+        "./theme/assets/index.html"
+      ],
+      "instances": "1",
+      "exec_mode": "fork",
+      "watch_options": {
+        "persistent": true,
+        "ignoreInitial": false
+      }
+    }
+  ]
+}

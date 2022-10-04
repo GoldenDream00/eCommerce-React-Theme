@@ -1,0 +1,46 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "airbnb",
+    "prettier"
+  ],
+  "plugins": ["react", "prettier", "jsx-a11y", "import"],
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "rules": {
+    "import/no-extraneous-dependencies": 0,
+    "import/no-import-module-exports": 0,
+    "react/function-component-definition": [
+      2,
+      { "namedComponents": "arrow-function" }
+    ],
+    "react/jsx-filename-extension": [
+      2,
+      { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
+    ],
+    "no-restricted-syntax": 0,
+    "import/extensions": ["error", "never", { "tsx": "always" }],
+    "no-param-reassign": [
+      "error",
+      { "props": true, "ignorePropertyModificationsFor": ["state"] }
+    ],
+    "react/prop-types": 0,
+    "import/no-unresolved": 0,
+    "react/no-array-index-key": 0,
+    "import/prefer-default-export": 0,
+    "import/newline-after-import": 0,
+    "class-methods-use-this": 0,
+    "no-console": "off"
+  }
+}
